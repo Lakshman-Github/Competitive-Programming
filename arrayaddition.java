@@ -1,8 +1,24 @@
+import java.util.*;
 class arrayaddition
 {
 public static void main(String[]args)
 {
-int a[]={1,2,3,4,5};
-System.out.println(a[0]+a[3]);
+int n;
+Scanner in=new Scanner(System.in);
+System.out.println("Enter the number of elements to store : ");
+n=in.nextInt();
+int a[]=new int[7];
+for(int i=0;i<n;i++)
+
+{
+
+if(a[i]%2==0)
+{
+System.out.println("it is of even number : "+a[i]);
+
+}
+}
+
+
 }
 }

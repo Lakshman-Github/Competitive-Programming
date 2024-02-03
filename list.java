@@ -1,21 +1,19 @@
 import java.util.*;
-class list
+class List
 {
 public static void main(String[]args)
 {
+ArrayList<String> stu = new ArrayList<String>();
 
-ArrayList list=new ArrayList();
+stu.add("Kumar");
+stu.add("Gopi");
+stu.add("Kozhli");
 
-list.add(10);
-list.add("Java");
-list.add(true);
-list.add(null);
-list.add('c');
-list.add(56.78);
+Iterator<String> itr = stu.iterator();
 
-for(var l: list)
+while(itr.hasNext())
 {
-System.out.println("Non generic :"+l);
+System.out.println("Mr."+itr.next());
 }
 }
 }
