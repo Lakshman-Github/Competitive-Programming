@@ -1,0 +1,11 @@
+import javax.swing.JFrame;
+class ModalFrame
+{
+public static void main(String[]args)
+{
+JFrame j=new JFrame("Modal Frame");
+j.setSize(200,200);
+j.setLayout(null);
+j.setVisible(true);
+}
+}

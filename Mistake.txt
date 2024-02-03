@@ -1,0 +1,12 @@
+class identifier
+{
+public static void main(String[]args)
+{
+int break=4;
+System.out.println(break);
+}
+}
+
+//We cannot use keywords as identifier in java
+
+// identifier means : a , b , $ , d , f , j , k , l etc. 

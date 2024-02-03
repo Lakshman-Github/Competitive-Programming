@@ -1,8 +1,13 @@
-class example
+class Greater
 {
-public static void main(String []a)
+public static void main(String[]args)
 {
-int a=10;
-System.out.println(a.type());
+int x=10;
+int y=25;
+
+if(x>y)
+System.out.println("x is greater");
+else
+System.out.println("y is greater");
 }
 }
