@@ -1,0 +1,89 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+class Solution
+{
+    public static void main(String[]args)
+    {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        House[] h = new House[n];
+        for(int i=0;i<n;i++)
+        {
+            int id=in.nextInt();in.nextLine();
+            String address = in.nextLine();
+            int pin = in.nextInt();in.nextLine();
+            double price = in.nextDouble();in.nextLine();
+            
+            h[i] = new House(id,address,pin,price);
+        }
+        int inputpin = in.nextInt();
+        
+        House result = findSecondCostiliestHouse(h,inputpin);
+        if(result!=null)
+        {
+            System.out.println("Id: "+result.getId());
+            System.out.println("Address: "+result.getAddress());
+            System.out.println("Price: "+result.getPrice());
+        }
+        else 
+        {
+            System.out.println("No House is available");
+        }
+    }
+public static House findSecondCostiliestHouse(House[] h,int inputpin)
+{
+    House result = null;
+    double[] arr = new double[h.length];
+    for(int i=0;i<h.length;i++)
+    {
+        if(h[i].getPin()==inputpin)
+        {
+            arr[i] = h[i].getPrice();
+        }
+    }
+    Arrays.sort(arr);
+    for(int i=0;i<h.length;i++)
+    {
+        if(h[i].getPrice()==arr[2])
+        {
+            result = h[i];
+        }
+    }
+    return result;
+}
+}
+class House{
+    int id;
+    String address;
+    int pin;
+    double price;
+    
+    House(int id,String address,int pin,double price)
+    {
+        this.id=id;
+        this.address=address;
+        this.pin=pin;
+        this.price=price;
+    }
+    
+    public int getId()
+    {
+        return id;
+    }
+    public String getAddress()
+    {
+        return address;
+    }
+    public int getPin()
+    {
+        return pin;
+    }
+    public double getPrice()
+    {
+        return price;
+    }
+}
