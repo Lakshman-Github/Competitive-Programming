@@ -11,7 +11,7 @@ age=in.nextInt();
 System.out.println("The age of Vijay is :"+age);
 System.out.println("Enter the height of Vijay");
 height=in.nextInt();
-System.out.println("The age of Vijay is :"+height);
+System.out.println("The height of Vijay is :"+height);
 s = age+5;
 System.out.println(s);
 }
